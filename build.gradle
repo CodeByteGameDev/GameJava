@@ -34,7 +34,10 @@ dependencies {
     compile group: 'com.badlogicgames.gdx', name: 'gdx-box2d', version: '1.9.10'
     // https://mvnrepository.com/artifact/com.badlogicgames.gdx/gdx-backend-lwjgl3
     compile group: 'com.badlogicgames.gdx', name: 'gdx-backend-lwjgl3', version: '1.9.10'
-
+    // https://mvnrepository.com/artifact/org.checkerframework/checker
+    testCompile group: 'org.checkerframework', name: 'checker', version: '3.1.0'
+    // https://mvnrepository.com/artifact/org.checkerframework/checker-qual
+    compile group: 'org.checkerframework', name: 'checker-qual', version: '3.1.0'
 }
 
 compileKotlin {
