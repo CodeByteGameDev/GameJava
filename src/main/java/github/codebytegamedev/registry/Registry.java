@@ -20,6 +20,10 @@ public final class Registry<E extends RegistryEntry<E>> implements RegistryEntry
         return reg;
     }
 
+    public static <E extends RegistryEntry<E>> Registry<E> newRegistry(String name){
+        return newRegistry(ResourceLocation.getResourceLocation(name));
+    }
+
     public void register(E object){
         if(backing.putIfAbsent(object.getName(),object)!=null)
             throw new IllegalArgumentException("Object with given name already exists");
